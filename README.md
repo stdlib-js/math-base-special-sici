@@ -76,8 +76,26 @@ The [branches.md][branches-url] file summarizes the available branches and displ
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var sici = require( '@stdlib/math-base-special-sici' );
+sici = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@umd/bundle.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@umd/bundle.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.sici;
+})()
+</script>
 ```
 
 #### sici( \[out,] x )
@@ -122,9 +140,14 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var sici = require( '@stdlib/math-base-special-sici' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/bundle.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@umd/bundle.js"></script>
+<script type="text/javascript">
+(function () {
 
 var x;
 var y;
@@ -135,6 +158,11 @@ for ( i = 0; i < 100; i++ ) {
     y = sici( x );
     console.log( 'si(%d) = %d, ci(%d) = %d', x, y[ 0 ], x, y[ 1 ] );
 }
+
+})()
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -195,6 +223,13 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [dependencies-url]: https://david-dm.org/stdlib-js/math-base-special-sici/main
 
 -->
+
+[umd]: https://github.com/umdjs/umd
+[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+[deno-url]: https://github.com/stdlib-js/math-base-special-sici/tree/deno
+[umd-url]: https://github.com/stdlib-js/math-base-special-sici/tree/umd
+[esm-url]: https://github.com/stdlib-js/math-base-special-sici/tree/esm
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
