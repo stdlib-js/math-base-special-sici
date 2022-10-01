@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,28 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var fcn = require( './sici.js' );
-
-
-// MAIN //
+import { Collection } from '@stdlib/types/object';
 
 /**
 * Computes the sine and cosine integrals.
 *
-* @param {(Array|TypedArray|Object)} [out] - output array
-* @param {number} x - input value
-* @returns {(Array|TypedArray|Object)} output array
+* @param out - output array
+* @param x - input value
+* @returns output array
 *
 * @example
-* var v = sici( 3.0 );
-* // returns [ ~1.849, ~0.12 ]
-*
-* @example
-* var Float64Array = require( '@stdlib/array-float64' );
+* var Float64Array = require( `@stdlib/array/float64` );
 *
 * var out = new Float64Array( 2 );
 *
@@ -46,6 +39,18 @@ var fcn = require( './sici.js' );
 *
 * var bool = ( v === out );
 * // returns true
+*/
+declare function sici( out: Collection, x: number ): Collection;
+
+/**
+* Computes the sine and cosine integrals.
+*
+* @param x - input value
+* @returns output array
+*
+* @example
+* var v = sici( 3.0 );
+* // returns [ ~1.849, ~0.12 ]
 *
 * @example
 * var v = sici( 0.0 );
@@ -59,14 +64,9 @@ var fcn = require( './sici.js' );
 * var v = sici( NaN );
 * // returns [ NaN, NaN ]
 */
-function sici( out, x ) {
-	if ( arguments.length === 1 ) {
-		return fcn( [ 0.0, 0.0 ], out );
-	}
-	return fcn( out, x );
-}
+declare function sici( x: number ): Collection;
 
 
 // EXPORTS //
 
-module.exports = sici;
+export = sici;
