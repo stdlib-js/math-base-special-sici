@@ -80,7 +80,7 @@ The [branches.md][branches-url] file summarizes the available branches and displ
 var sici = require( '@stdlib/math-base-special-sici' );
 ```
 
-#### sici( \[out,] x )
+#### sici( x )
 
 Computes the sine and cosine integrals.
 
@@ -98,14 +98,16 @@ v = sici( NaN );
 // returns [ NaN, NaN ]
 ```
 
-By default, the function returns the sine and cosine integrals as a two-element `array`. To avoid unnecessary memory allocation, the function supports providing an output (destination) object.
+#### sici.assign( x, out, stride, offset )
+
+Computes the sine and cosine integrals and assigns results to a provided output array.
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
 
 var out = new Float64Array( 2 );
 
-var v = sici( out, 3.0 );
+var v = sici.assign( 3.0, out, 1, 0 );
 // returns <Float64Array>[ ~1.849, ~0.12 ]
 
 var bool = ( v === out );
