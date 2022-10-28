@@ -31,7 +31,7 @@ The sine integral is defined as
 <!-- <equation class="equation" label="eq:sine_integral" align="center" raw="\int_0^x \frac{\sin t}{t}\; dt" alt="Sine integral."> -->
 
 <div class="equation" align="center" data-raw-text="\int_0^x \frac{\sin t}{t}\; dt" data-equation="eq:sine_integral">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@bb29798906e119fcb2af99e94b60407a270c9b32/lib/node_modules/@stdlib/math/base/special/sici/docs/img/equation_sine_integral.svg" alt="Sine integral.">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@d4f09dbdaca8b3dcbc05abc5c8284beefa916518/lib/node_modules/@stdlib/math/base/special/sici/docs/img/equation_sine_integral.svg" alt="Sine integral.">
     <br>
 </div>
 
@@ -42,7 +42,7 @@ and the cosine integral is defined as
 <!-- <equation class="equation" label="eq:cosine_integral" align="center" raw="\gamma + \log( x ) + \int_0^x \frac{\cos t - 1}{t}\; dt" alt="Cosine integral."> -->
 
 <div class="equation" align="center" data-raw-text="\gamma + \log( x ) + \int_0^x \frac{\cos t - 1}{t}\; dt" data-equation="eq:cosine_integral">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@bb29798906e119fcb2af99e94b60407a270c9b32/lib/node_modules/@stdlib/math/base/special/sici/docs/img/equation_cosine_integral.svg" alt="Cosine integral.">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@d4f09dbdaca8b3dcbc05abc5c8284beefa916518/lib/node_modules/@stdlib/math/base/special/sici/docs/img/equation_cosine_integral.svg" alt="Cosine integral.">
     <br>
 </div>
 
@@ -54,38 +54,30 @@ where `γ` is the [Euler-Mascheroni][eulergamma] constant.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-sici
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-sici = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var sici = require( 'path/to/vendor/umd/math-base-special-sici/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.sici;
-})();
-</script>
+var sici = require( '@stdlib/math-base-special-sici' );
 ```
 
 #### sici( x )
@@ -132,14 +124,9 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var sici = require( '@stdlib/math-base-special-sici' );
 
 var x;
 var y;
@@ -150,11 +137,6 @@ for ( i = 0; i < 100; i++ ) {
     y = sici( x );
     console.log( 'si(%d) = %d, ci(%d) = %d', x, y[ 0 ], x, y[ 1 ] );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
