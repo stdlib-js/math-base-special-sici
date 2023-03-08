@@ -30,10 +30,14 @@ The sine integral is defined as
 
 <!-- <equation class="equation" label="eq:sine_integral" align="center" raw="\int_0^x \frac{\sin t}{t}\; dt" alt="Sine integral."> -->
 
-<div class="equation" align="center" data-raw-text="\int_0^x \frac{\sin t}{t}\; dt" data-equation="eq:sine_integral">
+```math
+\int_0^x \frac{\sin t}{t}\; dt
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\int_0^x \frac{\sin t}{t}\; dt" data-equation="eq:sine_integral">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@9d139bffba6eb2d0113c8412c1a9bf60ca59ac60/lib/node_modules/@stdlib/math/base/special/sici/docs/img/equation_sine_integral.svg" alt="Sine integral.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -41,10 +45,14 @@ and the cosine integral is defined as
 
 <!-- <equation class="equation" label="eq:cosine_integral" align="center" raw="\gamma + \log( x ) + \int_0^x \frac{\cos t - 1}{t}\; dt" alt="Cosine integral."> -->
 
-<div class="equation" align="center" data-raw-text="\gamma + \log( x ) + \int_0^x \frac{\cos t - 1}{t}\; dt" data-equation="eq:cosine_integral">
+```math
+\gamma + \log( x ) + \int_0^x \frac{\cos t - 1}{t}\; dt
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\gamma + \log( x ) + \int_0^x \frac{\cos t - 1}{t}\; dt" data-equation="eq:cosine_integral">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@9d139bffba6eb2d0113c8412c1a9bf60ca59ac60/lib/node_modules/@stdlib/math/base/special/sici/docs/img/equation_cosine_integral.svg" alt="Cosine integral.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -54,20 +62,30 @@ where `γ` is the [Euler-Mascheroni][eulergamma] constant.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-sici
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@esm/index.mjs';
+var sici = require( '@stdlib/math-base-special-sici' );
 ```
 
 #### sici( x )
@@ -93,7 +111,7 @@ v = sici( NaN );
 Computes the sine and cosine integrals and assigns results to a provided output array.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var out = new Float64Array( 2 );
 
@@ -114,14 +132,9 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var sici = require( '@stdlib/math-base-special-sici' );
 
 var x;
 var y;
@@ -132,10 +145,6 @@ for ( i = 0; i < 100; i++ ) {
     y = sici( x );
     console.log( 'si(%d) = %d, ci(%d) = %d', x, y[ 0 ], x, y[ 1 ] );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -159,7 +168,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -198,7 +207,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
