@@ -80,13 +80,13 @@ where `γ` is the [Euler-Mascheroni][eulergamma] constant.
 ## Usage
 
 ```javascript
-import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@esm/index.mjs';
+import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@v0.2.2-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@v0.2.2-esm/index.mjs';
 ```
 
 #### sici( x )
@@ -140,7 +140,7 @@ var bool = ( v === out );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@esm/index.mjs';
+import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@v0.2.2-esm/index.mjs';
 
 var x;
 var y;
