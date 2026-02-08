@@ -80,13 +80,18 @@ where `γ` is the [Euler-Mascheroni][eulergamma] constant.
 ## Usage
 
 ```javascript
+import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-sici/tags). For example,
+
+```javascript
 import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@v0.2.3-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@v0.2.3-deno/mod.js';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@deno/mod.js';
 ```
 
 #### sici( x )
@@ -135,7 +140,7 @@ var bool = ( v === out );
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@v0.2.3-deno/mod.js';
+import sici from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sici@deno/mod.js';
 
 var x;
 var y;
